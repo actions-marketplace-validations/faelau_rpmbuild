@@ -1,4 +1,4 @@
-name: "Build & Release RPM Packages"
+name: "Build & Release Fedora Packages"
 description: "Build RPM package from a spec file and submit it as a release asset or an artifact."
 author: "Laura Faessler"
 
