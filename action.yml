@@ -1,0 +1,29 @@
+name: "Build & Release RPM Packages"
+description: "Build RPM package from a spec file and submit it as a release asset or an artifact."
+author: "Laura Faessler"
+
+inputs:
+  spec_file:
+    description: "Name of the spec file."
+    required: true
+    default: "*.spec"
+
+outputs:
+  rpm_path:
+    description: "Path to the RPM package."
+  rpm_name:
+    description: "Name of the RPM package."
+  srpm_path:
+    description: "Path to the Source RPM package."
+  srpm_name:
+    description: "Name of the Source RPM package."
+  content_type:
+    description: "Content-type of the packages."
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "package"
+  color: "blue"
